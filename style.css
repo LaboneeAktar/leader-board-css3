@@ -43,6 +43,7 @@ hr {
 .player {
     display: flex;
     align-items: center;
+
 }
 
 .player img {
@@ -115,7 +116,7 @@ hr {
 }
 
 .course {
-    height: 269.79px;
+    height: 280.79px;
     width: 270.42px;
     background-color: aliceblue;
     border-radius: 10px;
@@ -125,12 +126,18 @@ hr {
 
 .course-banner img {
     padding-left: 11.9px;
+    padding-top: 15px;
 }
 
 .course-banner,
 .course-details {
     padding-left: 11px;
-    padding-top: 15px;
+
+}
+
+.course-info {
+    padding-left: 2px;
+    padding-right: 10px;
 }
 
 .course-duration {
@@ -141,4 +148,43 @@ hr {
 
 .fa-clock {
     color: #FF4A60;
+}
+
+/* ---------------------------------
+        Media Qureies
+ ----------------------------------- */
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 13px;
+    }
+
+    .player {
+        flex-direction: column;
+    }
+}
+
+/* Tablet devices */
+@media only screen and (min-width:688px)and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+    }
+
+    .player {
+        flex-direction: column;
+    }
 }
